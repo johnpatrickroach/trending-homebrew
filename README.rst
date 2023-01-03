@@ -10,12 +10,12 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |github-actions| |travis| |appveyor| |requires|
-        | |coveralls| |codecov|
-        | |scrutinizer| |codacy| |codeclimate|
+      - | |github-actions| |travis| |appveyor| |
+        | |coveralls| |codecov| |
+        | |scrutinizer| |codacy| |codeclimate| |
     * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
+      - | |version| |wheel| |supported-versions| |supported-implementations| |
+        | |commits-since| |
 .. |docs| image:: https://readthedocs.org/projects/trending-homebrew/badge/?style=flat
     :target: https://trending-homebrew.readthedocs.io/
     :alt: Documentation Status
