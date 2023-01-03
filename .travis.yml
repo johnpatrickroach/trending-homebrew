@@ -99,3 +99,17 @@ notifications:
   email:
     on_success: never
     on_failure: always
+# Assuming you have installed the travis-ci CLI tool, after you
+# create the Github repo and add it to Travis, run the
+# following command to finish PyPI deployment setup:
+# $ travis encrypt --add deploy.password
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: johnpatrickroach
+  password:
+    secure: "bUDYHzpzAl6ugiXWt/g9QpYewlmbdY+K7orijTJEzRVh5rTLzLUHVj1nvTuaBvyXOaMxYfjv1JeDw/FnaVakEKl4m7zqeFycL9j7zcICKH++OA7nay+aXhXwUZfQnVSnedCBg75wZS2nHF4nHplr5Q6POvp6qsT+B8XVUNvw+5u+2nvugXeGydaPo1f4buf38nh0O4DwgbD2FaQRyjC1ldmyxI1p+Jzj18LCbwXEnPWTLkQM+OGHlYVGTgT/U+nkIaFSEk+raiebNhthyE29togZUHtyRgjoRLOlz/kaC8ta3StTQa4j7edddUYxa7ihVl+4N+Vtja91E/SFfKk2hQ1/ddMT6X5R/7iYtZkXE2bT3mPMhtZ731zIE3eC/Bi95EdaBIXd+XMSm/7QJCYzzRVKSgwn4lmjmujKn9u9r16crm4Lv2CSSnTYj+6Lshoa8O9tozkdFIym3F+yRKzzvLvcqCTUDGYSZuUu80pYdaZ/iOU8z18GpwnoMEOAbMjKN2LC6eEOoZHp2etUTA0uBnc6PBKbq8P8si6F5baJzUXjXODgG7cmXzkTIjYiz3QDFru+TPRokdXU4kg5iqulYkTJJJNHIHw/vNmO9Fz0CWY2F9iJqdshlDC7p+Xi+20OkiAnS29HiLBT8I5ShC6MXom+ocT1b3Nd5gWtkicV+wI="
+  on:
+    tags: true
+    repo: johnpatrickroach/trending_homebrew
+    python: 3.8

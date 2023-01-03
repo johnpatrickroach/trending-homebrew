@@ -1,6 +1,23 @@
-========
-Overview
-========
+=================
+trending-homebrew
+=================
+
+
+.. image:: https://img.shields.io/pypi/v/trending_homebrew.svg
+        :target: https://pypi.python.org/pypi/trending_homebrew
+
+.. image:: https://img.shields.io/travis/johnpatrickroach/trending_homebrew.svg
+        :target: https://travis-ci.com/johnpatrickroach/trending_homebrew
+
+.. image:: https://readthedocs.org/projects/trending-homebrew/badge/?version=latest
+        :target: https://trending-homebrew.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/shield.svg
+     :target: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/
+     :alt: Updates
+
 
 .. start-badges
 
@@ -103,6 +120,12 @@ Documentation
 https://trending-homebrew.readthedocs.io/
 
 
+Features
+========
+
+* TODO
+
+
 Development
 ===========
 
@@ -126,3 +149,8 @@ Note, to combine the coverage data from all the tox environments run:
       - ::
 
             PYTEST_ADDOPTS=--cov-append tox
+
+Credits
+=======
+
+* TODO
