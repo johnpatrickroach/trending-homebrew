@@ -11,7 +11,7 @@ trending-homebrew
       - |docs|
     * - tests
       - |github-actions| |travis| |appveyor| 
-        |coveralls| |codecov| |coverage-report|
+        |coveralls| |codecov|
         |scrutinizer| |codacy| |codeclimate| |code-style| |pre-commit|
     * - security
       - |security-bandit| |security-pyup|
@@ -100,8 +100,6 @@ trending-homebrew
 
 .. |license| image:: https://img.shields.io/github/license/johnpatrickroach/trending-homebrew
    :target: https://github.com/johnpatrickroach/trending-homebrew/blob/master/LICENSE
-
-.. |coverage-report| image:: assets/images/coverage.svg
 
 .. end-badges
 
