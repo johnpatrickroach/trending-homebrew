@@ -2,29 +2,6 @@
 trending-homebrew
 =================
 
-
-.. container::
-
-   |Build status| |Python Version| |Dependencies Status|
-
-   |Code style: black| |Security: bandit| |Pre-commit| |Semantic Versions| |License| |Coverage Report|
-
-.. image:: https://img.shields.io/pypi/v/trending_homebrew.svg
-        :target: https://pypi.python.org/pypi/trending_homebrew
-
-.. image:: https://img.shields.io/travis/johnpatrickroach/trending_homebrew.svg
-        :target: https://travis-ci.com/johnpatrickroach/trending_homebrew
-
-.. image:: https://readthedocs.org/projects/trending-homebrew/badge/?version=latest
-        :target: https://trending-homebrew.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
-
-.. image:: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/shield.svg
-     :target: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/
-     :alt: Updates
-
-
 .. start-badges
 
 .. list-table::
@@ -34,11 +11,14 @@ trending-homebrew
       - |docs|
     * - tests
       - |github-actions| |travis| |appveyor| 
-        |coveralls| |codecov|
-        |scrutinizer| |codacy| |codeclimate|
+        |coveralls| |codecov| |coverage-report|
+        |scrutinizer| |codacy| |codeclimate| |code-style| |pre-commit|
+    * - security
+      - |security-bandit| |security-pyup|
     * - package
       - |version| |wheel| |supported-versions| |supported-implementations|
-        |commits-since|
+        |commits-since| |dependencies-status| |semantic-versions| |license|
+
 .. |docs| image:: https://readthedocs.org/projects/trending-homebrew/badge/?style=flat
     :target: https://trending-homebrew.readthedocs.io/
     :alt: Documentation Status
@@ -99,6 +79,29 @@ trending-homebrew
     :alt: Scrutinizer Status
     :target: https://scrutinizer-ci.com/g/johnpatrickroach/trending-homebrew/
 
+.. |security-pyup| image:: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/shield.svg
+    :target: https://pyup.io/repos/github/johnpatrickroach/trending_homebrew/
+    :alt: Updates
+
+.. |dependencies-status| image:: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg
+   :target: https://github.com/johnpatrickroach/trending-homebrew/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
+
+.. |code-style| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+
+.. |security-bandit| image:: https://img.shields.io/badge/security-bandit-green.svg
+   :target: https://github.com/PyCQA/bandit
+
+.. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/johnpatrickroach/trending-homebrew/blob/master/.pre-commit-config.yaml
+
+.. |semantic-versions| image:: https://img.shields.io/badge/%C2%90%F0%9F%93%A6%F0%9F%9A%80%C2%90-semantic--versions-e10079.svg
+   :target: https://github.com/johnpatrickroach/trending-homebrew/releases
+
+.. |license| image:: https://img.shields.io/github/license/johnpatrickroach/trending-homebrew
+   :target: https://github.com/johnpatrickroach/trending-homebrew/blob/master/LICENSE
+
+.. |coverage-report| image:: assets/images/coverage.svg
 
 .. end-badges
 
@@ -160,20 +163,3 @@ Credits
 
 * TODO
 
-.. |Build status| image:: https://github.com/johnpatrickroach/trending-homebrew/workflows/build/badge.svg?branch=master&event=push
-   :target: https://github.com/johnpatrickroach/trending-homebrew/actions?query=workflow%3Abuild
-.. |Python Version| image:: https://img.shields.io/pypi/pyversions/trending-homebrew.svg
-   :target: https://pypi.org/project/trending-homebrew/
-.. |Dependencies Status| image:: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg
-   :target: https://github.com/johnpatrickroach/trending-homebrew/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
-.. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
-   :target: https://github.com/psf/black
-.. |Security: bandit| image:: https://img.shields.io/badge/security-bandit-green.svg
-   :target: https://github.com/PyCQA/bandit
-.. |Pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
-   :target: https://github.com/johnpatrickroach/trending-homebrew/blob/master/.pre-commit-config.yaml
-.. |Semantic Versions| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg
-   :target: https://github.com/johnpatrickroach/trending-homebrew/releases
-.. |License| image:: https://img.shields.io/github/license/johnpatrickroach/trending-homebrew
-   :target: https://github.com/johnpatrickroach/trending-homebrew/blob/master/LICENSE
-.. |Coverage Report| image:: assets/images/coverage.svg
