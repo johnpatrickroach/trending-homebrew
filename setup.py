@@ -31,6 +31,11 @@ else:
     LFLAGS = ''
 
 
+requirements = ['click', ]
+test_requirements = ['pytest>=3', ]
+setup_requirements = ['pytest-runner', 'setuptools_scm>=3.3.1', ]
+
+
 class OptionalBuildExt(build_ext):
     """Allow the building of C extensions to fail."""
     def run(self):
@@ -91,10 +96,13 @@ setup(
     zip_safe=False,
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
+        'Environment :: MacOS X',
         'Intended Audience :: Developers',
+        'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
+        'Operating System :: MacOS',
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
@@ -108,10 +116,14 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
+        'Programming Language :: Ruby',
         # uncomment if you test on these interpreters:
         # 'Programming Language :: Python :: Implementation :: IronPython',
         # 'Programming Language :: Python :: Implementation :: Jython',
         # 'Programming Language :: Python :: Implementation :: Stackless',
+        'Topic :: System :: Installation/Setup',
+        'Topic :: System :: Software Distribution',
+        'Topic :: System :: Systems Administration',
         'Topic :: Utilities',
     ],
     project_urls={
@@ -120,22 +132,23 @@ setup(
         'Issue Tracker': 'https://github.com/johnpatrickroach/trending-homebrew/issues',
     },
     keywords=[
-        # eg: 'keyword1', 'keyword2', 'keyword3',
+        'homebrew', 'formulae', 'formula', 'casks', 'cask',
+        'build', 'builds', 'error', 'errors', 'count', 'counts',
+        'installs', 'items', 'trends', 'trending', 'top', 'macos',
+        'brews', 'brew', 'tap', 'taps', 'cli', 'python', 'package',
+        'pypi', 'pip', 'johnpatrickroach', 'better-wealth', 
+        'trending-homebrew', 'trending_homebrew', 'install'
     ],
     python_requires='>=3.7',
-    install_requires=[
-        'click',
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
-    ],
+    install_requires=requirements
+    test_suite='tests',
+    tests_require=test_requirements,
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],
         #   ':python_version=="2.6"': ['argparse'],
     },
-    setup_requires=[
-        'pytest-runner',
-        'setuptools_scm>=3.3.1',
-    ],
+    setup_requires=setup_requirements
     entry_points={
         'console_scripts': [
             'trending-homebrew = trending_homebrew.cli:main',
