@@ -10,6 +10,10 @@ insert_final_newline = true
 indent_size = 4
 charset = utf-8
 
+[*.{py, pyi}]
+indent_style = space
+indent_size = 4
+
 [*.{bat,cmd,ps1}]
 indent_style = tab
 end_of_line = crlf
@@ -25,3 +29,9 @@ insert_final_newline = false
 
 [Makefile]
 indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{diff,patch}]
+trim_trailing_whitespace = false

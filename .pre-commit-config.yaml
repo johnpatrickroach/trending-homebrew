@@ -2,6 +2,11 @@
 #   pre-commit install
 # To update the pre-commit hooks run:
 #   pre-commit install-hooks
+default_language_version:
+  python: python3.7
+
+default_stages: [commit, push]
+
 exclude: '^(\.tox|ci/templates|\.bumpversion\.cfg)(/|$)'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -12,6 +17,7 @@ repos:
       - id: check-yaml
       - id: trailing-whitespace
       - id: end-of-file-fixer
+        exclude: LICENSE
       - id: debug-statements
   - repo: https://github.com/timothycrosley/isort
     rev: master

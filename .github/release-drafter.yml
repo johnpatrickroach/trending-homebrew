@@ -1,8 +1,18 @@
+# Release drafter configuration https://github.com/release-drafter/release-drafter#configuration
+# Emojis were chosen to match the https://gitmoji.carloscuesta.me/
+
+name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
   - title: ":rocket: Features"
-    label: "enhancement"
+    labels: [enhancement, feature]
+  - title: ":wrench: Fixes & Refactoring"
+    labels: [bug, refactoring, bugfix, fix]
+  - title: ":package: Build System & CI/CD"
+    labels: [build, ci, testing]
   - title: ":fire: Removals and Deprecations"
     label: "removal"
   - title: ":beetle: Fixes"
@@ -23,7 +33,13 @@ categories:
     labels:
       - "dependencies"
       - "build"
+  - title: ":arrow_up: Dependencies updates"
+    labels: [dependencies]
 template: |
-  ## Changes
+  ## What’s Changed
 
   $CHANGES
+
+  ## :busts_in_silhouette: List of contributors
+
+  $CONTRIBUTORS
