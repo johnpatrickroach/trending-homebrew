@@ -121,6 +121,7 @@ setup(
         # 'Programming Language :: Python :: Implementation :: IronPython',
         # 'Programming Language :: Python :: Implementation :: Jython',
         # 'Programming Language :: Python :: Implementation :: Stackless',
+        'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: System :: Installation/Setup',
         'Topic :: System :: Software Distribution',
         'Topic :: System :: Systems Administration',

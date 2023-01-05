@@ -152,3 +152,15 @@ jobs:
 
       - name: Upload coverage report
         uses: codecov/codecov-action@v3.1.0
+
+  docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build . -t trending_homebrew:test
+
+      - name: Smoke test docker image
+        run: |
+          docker run --rm trending_homebrew:test 10
