@@ -1,1 +1,3 @@
 * text=auto eol=lf
+CHANGELOG.rst merge=union
+poetry.lock merge=binary

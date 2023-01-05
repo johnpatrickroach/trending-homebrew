@@ -15,9 +15,15 @@ Why does this file exist, and why not put this in __main__?
   Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
 """
 import click
+import log
 
+from . import utils
 
 @click.command()
 @click.argument('names', nargs=-1)
 def main(names):
-    click.echo(repr(names))
+  log.init()
+  click.echo(repr(names))
+
+if __name__ == '__main__':
+    main()
