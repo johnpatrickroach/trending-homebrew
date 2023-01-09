@@ -1,0 +1,5 @@
+aiohttp
+aiohttp_jinja2
+markdown2
+trafaret_config
+uvloop

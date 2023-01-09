@@ -1,0 +1,4 @@
+doc8
+Sphinx
+sphinx-autodoc-typehints
+sphinxcontrib-websupport

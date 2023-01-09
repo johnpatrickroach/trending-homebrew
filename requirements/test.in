@@ -1,0 +1,20 @@
+-r base.in
+
+aiohttp-debugtoolbar
+
+aiohttp-devtools
+
+
+autopep8
+black
+flake8
+isort
+
+mypy
+pre-commit
+py-spy
+# Linting/Tooling
+pylint
+pytest
+pytest-aiohttp
+pytest-cov
