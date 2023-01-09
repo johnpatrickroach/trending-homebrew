@@ -6,13 +6,12 @@ default_language_version:
   python: python3
 default_stages: [commit, push]
 fail_fast: false
+exclude: '^(\.tox|ci/templates|\.bumpversion\.cfg)(/|$)'
 repos:
   - repo: meta
     hooks:
       #- id: check-hooks-apply
       - id: check-useless-excludes
-exclude: '^(\.tox|ci/templates|\.bumpversion\.cfg)(/|$)'
-repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: master
     hooks:
@@ -128,7 +127,7 @@ repos:
     rev: 1.0.1
     hooks:
       - id: blackbricks
-        # args: [--line-length=120]
+        # args: [--line-length=140]
 
   ##########
   # docker #

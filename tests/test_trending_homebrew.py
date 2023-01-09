@@ -2,13 +2,11 @@
 
 """Tests for `trending_homebrew` package."""
 
-import pytest
-
 from click.testing import CliRunner
 
 from trending_homebrew import trending_homebrew
-from trending_homebrew import longest
 from trending_homebrew import cli
+
 
 def test_command_line_interface():
     """Test the CLI."""
@@ -22,5 +20,6 @@ def test_command_line_interface():
     assert '--help  Show this message and exit.' in help_result.output
 
 
-def test_longest():
-    assert longest([b'a', b'bc', b'abc']) == b'abc'
+def test_trending_homebrew():
+    """Test trending_homebrew."""
+    assert trending_homebrew.DATA_DAY_RANGES == ["365", "90", "30"]

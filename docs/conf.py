@@ -1,9 +1,13 @@
+# pylint: disable=invalid-name
 # -*- coding: utf-8 -*-
+
+"""Configure the documents."""
+
+
 import os
 import traceback
-import sys
 
-import tomli
+DOCUMENTATION = 'trending-homebrew Documentation'
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -47,12 +51,13 @@ language = 'en'
 project = 'trending-homebrew'
 year = '2023'
 author = 'John Patrick Roach'
-copyright = '{0}, {1}'.format(year, author)
+copyright_string = f'{year}, {author}'
 try:
     from pkg_resources import get_distribution
 
     version = release = get_distribution('trending_homebrew').version
-except Exception:
+except ImportError as err:
+    print(err)
     traceback.print_exc()
     version = release = '0.1.0'
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -94,20 +99,20 @@ html_sidebars = {
         'searchbox.html',
     ],
 }
-html_short_title = '%s-%s' % (project, version)
+html_short_title = f'{project}-{version}'
 latex_documents = [
     (master_doc, 'trending_homebrew.tex',
-     'trending-homebrew Documentation',
+     DOCUMENTATION,
      'John Patrick Roach', 'manual'),
 ]
 man_pages = [
     (master_doc, 'trending_homebrew',
-     'trending-homebrew Documentation',
+     DOCUMENTATION,
      [author], 1)
 ]
 texinfo_documents = [
     (master_doc, 'trending_homebrew',
-     'trending-homebrew Documentation',
+     DOCUMENTATION,
      author,
      'trending_homebrew',
      'One line description of project.',
