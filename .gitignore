@@ -499,7 +499,7 @@ bin/
 *.log.*
 *.sig
 pkg/
-src/
+#src/
 ### asdf ###
 /.tool-versions
 ### ASPNETCore ###
