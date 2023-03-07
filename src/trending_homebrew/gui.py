@@ -6,7 +6,6 @@ from tkinter import *
 from tkinter.ttk import *  # type: ignore
 
 import log
-
 from . import utils
 
 

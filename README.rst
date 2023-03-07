@@ -10,7 +10,7 @@ trending-homebrew
     * - docs
       - |docs|
     * - tests
-      - |github-actions| |travis| |appveyor| 
+      - |github-actions| |travis| |appveyor|
         |coveralls| |codecov|
         |scrutinizer| |codacy| |codeclimate| |code-style| |pre-commit|
     * - security
@@ -160,4 +160,3 @@ Credits
 =======
 
 * TODO
-

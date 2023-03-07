@@ -2,10 +2,10 @@
 
 """Tests for `trending_homebrew` package."""
 
-from click.testing import CliRunner
-
-from trending_homebrew import trending_homebrew
 from trending_homebrew import cli
+from trending_homebrew import trending_homebrew
+
+from click.testing import CliRunner
 
 
 def test_command_line_interface():

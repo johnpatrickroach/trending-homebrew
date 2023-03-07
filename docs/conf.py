@@ -7,6 +7,7 @@
 import os
 import traceback
 
+
 DOCUMENTATION = 'trending-homebrew Documentation'
 
 extensions = [
@@ -28,11 +29,7 @@ extensions = [
 autoclass_content = 'class'
 autodoc_member_order = 'bysource'
 autodoc_typehints = "description"
-autodoc_default_flags = {
-    'members': '',
-    'undoc-members': 'code,error_template',
-    'exclude-members': '__dict__,__weakref__',
-}
+autodoc_default_flags = {'members': '', 'undoc-members': 'code,error_template', 'exclude-members': '__dict__,__weakref__'}
 # Set `typing.TYPE_CHECKING` to `True`:
 # https://pypi.org/project/sphinx-autodoc-typehints/
 set_type_checking_flag = False
@@ -65,9 +62,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 add_module_names = False
 todo_include_todos = False
-autodoc_default_options = {
-    'show-inheritance': True,
-}
+autodoc_default_options = {'show-inheritance': True}
 extlinks = {
     'issue': ('https://github.com/johnpatrickroach/trending-homebrew/issues/%s', '#'),
     'pr': ('https://github.com/johnpatrickroach/trending-homebrew/pull/%s', 'PR #'),
@@ -77,10 +72,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
-    html_theme_options = {
-        'sidebar_collapse': False,
-        'show_powered_by': False,
-    }
+    html_theme_options = {'sidebar_collapse': False, 'show_powered_by': False}
 html_static_path = ['_static']
 htmlhelp_basename = 'trending_homebrewdoc'
 html_use_smartypants = True
@@ -97,26 +89,13 @@ html_sidebars = {
         'moreinfo.html',
         'github.html',
         'searchbox.html',
-    ],
+    ]
 }
 html_short_title = f'{project}-{version}'
-latex_documents = [
-    (master_doc, 'trending_homebrew.tex',
-     DOCUMENTATION,
-     'John Patrick Roach', 'manual'),
-]
-man_pages = [
-    (master_doc, 'trending_homebrew',
-     DOCUMENTATION,
-     [author], 1)
-]
+latex_documents = [(master_doc, 'trending_homebrew.tex', DOCUMENTATION, 'John Patrick Roach', 'manual')]
+man_pages = [(master_doc, 'trending_homebrew', DOCUMENTATION, [author], 1)]
 texinfo_documents = [
-    (master_doc, 'trending_homebrew',
-     DOCUMENTATION,
-     author,
-     'trending_homebrew',
-     'One line description of project.',
-     'Miscellaneous'),
+    (master_doc, 'trending_homebrew', DOCUMENTATION, author, 'trending_homebrew', 'One line description of project.', 'Miscellaneous')
 ]
 napoleon_use_ivar = True
 napoleon_use_rtype = False
