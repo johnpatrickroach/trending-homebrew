@@ -21,9 +21,9 @@ from setuptools.dist import Distribution
 REGEXP = re.compile(r'^__version__\W*=\W*"([\d.abrc]+)"')
 PARENT = pathlib.Path(__file__).parent
 
-requirements = ['click', ]
-test_requirements = ['pytest>=3', ]
-setup_requirements = ['pytest-runner', 'setuptools_scm>=3.3.1', ]
+requirements = ['click']
+test_requirements = ['pytest>=3']
+setup_requirements = ['pytest-runner', 'setuptools_scm>=3.3.1']
 
 
 class BinaryDistribution(Distribution):
@@ -36,16 +36,13 @@ class BinaryDistribution(Distribution):
 
 def read(*names, **kwargs):
     """Read a file."""
-    with io.open(join(dirname(__file__), *names),
-                 encoding=kwargs.get('encoding', 'utf8')) as file_handler:
+    with io.open(join(dirname(__file__), *names), encoding=kwargs.get('encoding', 'utf8')) as file_handler:
         return file_handler.read()
 
 
 def read_version():
     """read_version."""
-    init_py = os.path.join(
-        os.path.dirname(__file__), "src", "better_crypto", "__init__.py"
-    )
+    init_py = os.path.join(os.path.dirname(__file__), "src", "better_crypto", "__init__.py")
 
     with open(init_py, encoding="utf-8") as open_file:
         for line in open_file:
@@ -66,16 +63,11 @@ def read_requirements(path: str):
 if __name__ == "__main__":
     setup(
         name='trending-homebrew',
-        use_scm_version={
-            'local_scheme': 'dirty-tag',
-            'write_to': 'src/trending_homebrew/_version.py',
-            'fallback_version': '0.1.0',
-        },
+        use_scm_version={'local_scheme': 'dirty-tag', 'write_to': 'src/trending_homebrew/_version.py', 'fallback_version': '0.1.0'},
         license='MIT',
         description='Tool for identifying trending Homebrew formulae, casks, and build errors.',
         long_description='{}\n{}'.format(
-            re.compile('^.. start-badges.*^.. end-badges',
-                       re.M | re.S).sub('', read('README.rst')),
+            re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
             re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst')),
         ),
         author='John Patrick Roach',
@@ -125,12 +117,37 @@ if __name__ == "__main__":
             'Issue Tracker': 'https://github.com/johnpatrickroach/trending-homebrew/issues',
         },
         keywords=[
-            'homebrew', 'formulae', 'formula', 'casks', 'cask',
-            'build', 'builds', 'error', 'errors', 'count', 'counts',
-            'installs', 'items', 'trends', 'trending', 'top', 'macos',
-            'brews', 'brew', 'tap', 'taps', 'cli', 'python', 'package',
-            'pypi', 'pip', 'johnpatrickroach', 'better-wealth',
-            'trending-homebrew', 'trending_homebrew', 'install'
+            'homebrew',
+            'formulae',
+            'formula',
+            'casks',
+            'cask',
+            'build',
+            'builds',
+            'error',
+            'errors',
+            'count',
+            'counts',
+            'installs',
+            'items',
+            'trends',
+            'trending',
+            'top',
+            'macos',
+            'brews',
+            'brew',
+            'tap',
+            'taps',
+            'cli',
+            'python',
+            'package',
+            'pypi',
+            'pip',
+            'johnpatrickroach',
+            'better-wealth',
+            'trending-homebrew',
+            'trending_homebrew',
+            'install',
         ],
         python_requires='>=3.7',
         install_requires=read_requirements("requirements/production.txt"),
@@ -142,10 +159,6 @@ if __name__ == "__main__":
             #   ':python_version=="2.6"': ['argparse'],
         },
         setup_requires=setup_requirements,
-        entry_points={
-            'console_scripts': [
-                'trending-homebrew = trending_homebrew.cli:main',
-            ]
-        },
+        entry_points={'console_scripts': ['trending-homebrew = trending_homebrew.cli:main']},
         distclass=BinaryDistribution,
     )

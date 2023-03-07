@@ -4,8 +4,10 @@ import os
 import pathlib
 import subprocess
 import sys
+
 import jinja2
 import matrix
+
 
 base_path = pathlib.Path(__file__).resolve().parent.parent
 templates_path = base_path / "ci" / "templates"
@@ -48,21 +50,15 @@ def main() -> None:
     """Run the main function."""
     print(f"Project path: {base_path}")
     jinja: jinja2.Environment = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(str(templates_path)),
-        trim_blocks=True,
-        lstrip_blocks=True,
-        keep_trailing_newline=True,
+        loader=jinja2.FileSystemLoader(str(templates_path)), trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True
     )
 
     tox_environments = {}
-    for (alias, conf) in matrix.from_file(base_path / "setup.cfg").items():
+    for alias, conf in matrix.from_file(base_path / "setup.cfg").items():
         deps = conf["dependencies"]
-        tox_environments[alias] = {
-            "deps": deps.split(),
-        }
+        tox_environments[alias] = {"deps": deps.split()}
         if "coverage_flags" in conf:
-            cover: bool = {"false": False, "true": True}[
-                conf["coverage_flags"].lower()]
+            cover: bool = {"false": False, "true": True}[conf["coverage_flags"].lower()]
             tox_environments[alias].update(cover=cover)
         if "environment_variables" in conf:
             env_vars = conf["environment_variables"]
@@ -73,8 +69,7 @@ def main() -> None:
             template_path = str(template.relative_to(templates_path))
             destination = base_path / template_path
             destination.parent.mkdir(parents=True, exist_ok=True)
-            destination.write_text(jinja.get_template(
-                template_path).render(tox_environments=tox_environments))
+            destination.write_text(jinja.get_template(template_path).render(tox_environments=tox_environments))
             print(f"Wrote {template_path}")
     print("DONE.")
 

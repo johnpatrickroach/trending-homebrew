@@ -1,8 +1,8 @@
 """Test cases for the __main__ module."""
+from trending_homebrew import __main__
+
 import pytest
 from click.testing import CliRunner
-
-from trending_homebrew import __main__
 
 
 @pytest.fixture
